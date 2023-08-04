@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0 0 1em;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    border: 5px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header li {
+    margin-left: 10px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid transparent;
+}
+
+header .title {
+    font-size: 150%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1em;
+}
+
+/* Mobile-first styles */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .second {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .cards {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards li {
+        width: 100%;
+    }
+
+    .cards .inner {
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 1em;
+    }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 769px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 16vw;
+        gap: 1em;
+        padding: 0 1em;
+    }
+
+    .second {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+    }
+
+    .cards {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cards li {
+        border: 5px solid #000;
+        margin: 0.5em;
+        list-style: none;
+        width: 350px;
+    }
+
+    .cards .inner {
+        padding: 0.5em 1em;
+    }
+
+    .sidebar {
+        background-color: #333;
+        border: 5px solid #000;
+        padding: 0.5em 1em;
+        color: #fff;
+        margin-top: 1em;
+        height: 105vh;
+        width: 16vw;
+    }
+
+    /* Additional styles */
+    .cards h2 {
+        background-color: #333;
+        color: #fff;
+        margin: 0;
+        padding: 0.5em 0;
+        text-align: center;
+        /* Center the h2 text */
+    }
+}
